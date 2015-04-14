@@ -21,3 +21,22 @@
 .clearfix:after {
 	clear: both;
 }
+
+/* Add the logo on top */
+.main-title a {
+	background-color: transparent;
+	background: url('img/eellak.svg') 0 0 no-repeat;
+	text-indent: -9999px;
+	display: block;
+	height: 132px;
+	width: 450px;
+	border: 0;
+	overflow: hidden;
+	*text-indent: -9999px;
+}
+.main-title a:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 150%;
+}
