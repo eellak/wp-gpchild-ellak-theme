@@ -97,6 +97,15 @@
 	color: #ff0084;
 }
 
+@media only screen and (min-width: 769px) {
+	#primary {
+		width: 70%;
+	}
+	#right-sidebar {
+		width: 30%;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.header-social-links {
 		float: left;
