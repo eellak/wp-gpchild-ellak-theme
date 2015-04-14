@@ -23,6 +23,9 @@
 }
 
 /* Add the logo on top */
+.site-branding {
+	float: left;
+}
 .main-title a {
 	background-color: transparent;
 	background: url('img/eellak.svg') 0 0 no-repeat;
@@ -39,4 +42,64 @@
 	display: block;
 	width: 0;
 	height: 150%;
+}
+
+/* Social links on header */
+.header-social-links {
+	float: right;
+	margin-top: 94px;
+}
+.social-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: FontAwesome;
+	font-size: 24px;
+}
+.social-links li {
+	float: left;
+	margin-left: 15px;
+}
+.social-links li:first-child {
+	margin-left: 0;
+}
+.social-links span {
+	display: none;
+}
+.social-link-facebook a:before {
+	content: "\f09a";
+}
+.social-link-facebook:hover a:before {
+	color: #3b5998;
+}
+.social-link-twitter a:before {
+	content: "\f099";
+}
+.social-link-twitter:hover a:before {
+	color: #00aced;
+}
+.social-link-github a:before {
+	content: "\f09b";
+}
+.social-link-github:hover a:before {
+	color: #4183c4;
+}
+.social-link-vimeo a:before {
+	content: "\f194";
+}
+.social-link-vimeo:hover a:before {
+	color: #45bbff;
+}
+.social-link-flickr a:before {
+	content: "\f16e";
+}
+.social-link-flickr:hover a:before {
+	color: #ff0084;
+}
+
+@media only screen and (max-width: 768px) {
+	.header-social-links {
+		float: left;
+		margin: 0 0 20px;
+	}
 }
