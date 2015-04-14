@@ -34,6 +34,14 @@ function ellak_fonts_subset() {
 	return 'latin,latin-ext,greek';
 }
 
+// add slider in #primary, only in home. requires 'Advanced Post Slider' plugin
+add_action( 'generate_before_main_content', 'ellak_slider' );
+function ellak_slider() {
+	if( is_front_page() && shortcode_exists( 'advps-slideshow' ) ) {
+		echo do_shortcode( '[advps-slideshow optset="1"]' );
+	}
+}
+
 // social links
 add_action( 'generate_before_header_content', 'ellak_social_links' );
 function ellak_social_links() { ?>
