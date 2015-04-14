@@ -112,6 +112,23 @@
 	padding: 40px 30px;
 }
 
+.paging-navigation {
+	text-align: center;
+}
+.paging-navigation .page-numbers {
+	margin-right: 5px;
+}
+.paging-navigation .prev {
+	float: left;
+}
+.paging-navigation .next {
+	float: right;
+	margin-right: 0;
+}
+.paging-navigation .current {
+	font-weight: bold;
+}
+
 @media only screen and (min-width: 769px) {
 	#primary {
 		width: 70%;
