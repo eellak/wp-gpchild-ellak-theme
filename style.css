@@ -112,6 +112,10 @@
 	padding: 40px 30px;
 }
 
+.post-image {
+	text-align: center;
+}
+
 .paging-navigation {
 	text-align: center;
 }
