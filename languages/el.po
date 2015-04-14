@@ -1,0 +1,8 @@
+msgid "Built with open source software"
+msgstr "Υλοποίηση με χρήση του Ανοικτού Λογισμικού"
+
+msgid "Terms of use and privacy statement"
+msgstr "Όροι Χρήσης & Δήλωση Απορρήτου"
+
+msgid "Content License:"
+msgstr "Άδεια χρήσης περιεχομένου:"
