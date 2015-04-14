@@ -2,12 +2,22 @@
 
 /* functions, filters and hooks for ellak.gr child theme */
 
-// remove generatepress action hooks
-add_action( 'after_setup_theme', 'ellak_remove_actions' );
-function ellak_remove_actions() {
-	// remove featured image for single post header
+add_action( 'after_setup_theme', 'ellak_theme_setup' );
+function ellak_theme_setup() {
+	// remove generatepress action hooks
 	remove_action( 'generate_before_content',
 		'generate_featured_page_header_inside_single', 10 );
+	remove_action( 'generate_credits', 'generate_add_footer_info' );
+
+	// child theme translations in /languages
+	load_child_theme_textdomain( 'ellakgr', get_stylesheet_directory()
+		. '/languages' );
+
+	// hide admin bar for subscribers
+	$user = wp_get_current_user();
+	if( in_array( 'subscriber', $user->roles ) ) {
+		show_admin_bar( false );
+	}
 }
 
 // enqueue extra scripts and styles
@@ -55,5 +65,17 @@ function ellak_social_links() { ?>
 		</ul>
 	</div><!-- .header-social-links -->
 <?php }
+
+// footer
+add_action( 'generate_credits', 'ellak_credits' );
+function ellak_credits() {
+	echo __( 'Built with open source software', 'ellakgr' )
+		. ' <a href="https://wordpress.org/" target="_blank">Wordpress</a> | '
+		. '<a href="' . home_url( '/ori-chrisis' ) . '">'
+		. __( 'Terms of use and privacy statement', 'ellakgr' ) . '</a> | '
+		. __( 'Content License:', 'ellakgr' )
+		. ' <a href="https://creativecommons.org/licenses/by-sa/4.0/">'
+		. __( 'CC-BY-SA', 'ellakgr' ) . '</a>';
+}
 
 ?>
