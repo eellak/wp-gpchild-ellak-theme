@@ -28,6 +28,12 @@ function ellak_inside_header_classes( $classes ) {
 	return $classes;
 }
 
+// add greek subset in embedded fonts
+add_filter( 'generate_fonts_subset', 'ellak_fonts_subset' );
+function ellak_fonts_subset() {
+	return 'latin,latin-ext,greek';
+}
+
 // social links
 add_action( 'generate_before_header_content', 'ellak_social_links' );
 function ellak_social_links() { ?>
