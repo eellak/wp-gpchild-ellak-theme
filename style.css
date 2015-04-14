@@ -97,6 +97,17 @@
 	color: #ff0084;
 }
 
+.main-navigation,
+.main-navigation ul ul {
+	background-color: #f58220;
+}
+.main-navigation .main-nav ul li > a:hover,
+.main-navigation .main-nav ul li.sfHover > a,
+.main-navigation .main-nav ul ul li > a:hover,
+.main-navigation .main-nav ul ul li.sfHover > a {
+	background-color: #eb4323;
+}
+
 .separate-containers .widget-area .widget_advanced_text {
 	padding: 40px 30px;
 }
