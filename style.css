@@ -97,6 +97,10 @@
 	color: #ff0084;
 }
 
+.separate-containers .widget-area .widget_advanced_text {
+	padding: 40px 30px;
+}
+
 @media only screen and (min-width: 769px) {
 	#primary {
 		width: 70%;
