@@ -44,6 +44,14 @@ function ellak_fonts_subset() {
 	return 'latin,latin-ext,greek';
 }
 
+// load the ellak news bar if available
+add_action( 'generate_before_header', 'ellak_load_newsbar' );
+function ellak_load_newsbar() {
+	if( function_exists( 'ellak_newsbar' ) ) {
+		ellak_newsbar();
+	}
+}
+
 // add slider in #primary, only in home. requires 'Advanced Post Slider' plugin
 add_action( 'generate_before_main_content', 'ellak_slider' );
 function ellak_slider() {
